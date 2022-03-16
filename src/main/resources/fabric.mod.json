@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "upc",
+  "version": "${version}",
+  "name": "UPC",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/upc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "ooo.foooooooooooo.upc.upc.client.UpcClient"
+    ],
+    "main": [
+      "ooo.foooooooooooo.upc.upc.Upc"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
