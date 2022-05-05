@@ -1,6 +1,5 @@
 package ooo.foooooooooooo.upc.block;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -15,8 +14,8 @@ import org.jetbrains.annotations.Nullable;
 public class UPCBlock extends Block implements BlockEntityProvider {
     public static final DirectionProperty FACING = FacingBlock.FACING;
 
-    public UPCBlock() {
-        super(FabricBlockSettings.of(Material.METAL));
+    public UPCBlock(Settings settings) {
+        super(settings);
     }
 
     @Nullable
