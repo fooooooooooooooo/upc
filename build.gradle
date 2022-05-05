@@ -11,6 +11,13 @@ repositories {
     maven {
         url 'https://maven.bai.lol'
     }
+    // Modern Industrialization
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
@@ -39,6 +46,14 @@ dependencies {
     modRuntimeOnly("lol.bai.megane:megane-vanilla:${project.megane_vanilla_version}") {
         exclude(group: "net.fabricmc.fabric-api")
         exclude(group: "mcp.mobius.waila")
+    }
+
+    dependencies {
+        modRuntimeOnly("lol.bai:badpackets:fabric-${project.badpackets_version}")
+    }
+
+    modImplementation("curse.maven:modern-industrialization-405388:3775815") {
+        exclude(group: "net.fabricmc.fabric-api")
     }
 }
 

@@ -23,7 +23,7 @@
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",
-    "minecraft": "1.18.1",
+    "minecraft": "1.18.2",
     "team_reborn_energy": ">=2.2.0",
     "modern_industrialization": ">=1.0.0"
   },
