@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.12.9'
+    id 'fabric-loom' version '0.12-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -13,11 +13,12 @@ repositories {
     }
 	// Modern Industrialization
     maven {
-        url "https://cursemaven.com"
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
         content {
-            includeGroup "curse.maven"
+            includeGroup "maven.modrinth"
         }
-	}	
+    }
 }
 
 dependencies {
@@ -48,11 +49,9 @@ dependencies {
         exclude(group: "mcp.mobius.waila")
     }
 	
-	dependencies {
-        modRuntimeOnly("lol.bai:badpackets:fabric-${project.badpackets_version}")
-    }
-	
-	modImplementation("curse.maven:modern-industrialization-405388:3818691") {
+    modRuntimeOnly("lol.bai:badpackets:fabric-${project.badpackets_version}")
+
+	modImplementation("maven.modrinth:modern-industrialization:1.2.2") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }

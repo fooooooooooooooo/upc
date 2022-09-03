@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "upc",
-  "version": "0.0.2",
+  "version": "${version}",
   "name": "UPC",
   "description": "Adds a block to convert between Tech Reborn and Modern Industrialization energy",
   "authors": [
@@ -25,7 +25,7 @@
     "fabric": "*",
     "minecraft": "1.18.2",
     "team_reborn_energy": ">=2.2.0",
-    "modern_industrialization": ">=1.0.0"
+    "modern_industrialization": ">=1.2.0"
   },
   "custom": {
     "megane:modules": [
