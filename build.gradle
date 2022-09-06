@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.12-SNAPSHOT'
+    id 'fabric-loom' version '1.0-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -35,23 +35,23 @@ dependencies {
     modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
     modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
 
-    modImplementation("lol.bai.megane:megane-api:${project.megane_api_version}") {
+    modImplementation("lol.bai.megane:megane-api:${project.megane_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
-    modRuntimeOnly("lol.bai.megane:megane-runtime:${project.megane_runtime_version}") {
+    modRuntimeOnly("lol.bai.megane:megane-runtime:${project.megane_version}") {
         exclude(group: "net.fabricmc.fabric-api")
         exclude(group: "mcp.mobius.waila")
     }
 
-    modRuntimeOnly("lol.bai.megane:megane-vanilla:${project.megane_vanilla_version}") {
+    modRuntimeOnly("lol.bai.megane:megane-vanilla:${project.megane_version}") {
         exclude(group: "net.fabricmc.fabric-api")
         exclude(group: "mcp.mobius.waila")
     }
 	
     modRuntimeOnly("lol.bai:badpackets:fabric-${project.badpackets_version}")
 
-	modImplementation("maven.modrinth:modern-industrialization:1.2.2") {
+	modImplementation("maven.modrinth:modern-industrialization:${project.mi_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }
