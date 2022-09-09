@@ -2,8 +2,8 @@ package ooo.foooooooooooo.upc.blockentity;
 
 import aztech.modern_industrialization.api.energy.EnergyApi;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.core.Registry;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import ooo.foooooooooooo.upc.Upc;
 import ooo.foooooooooooo.upc.block.ModBlocks;
 import team.reborn.energy.api.EnergyStorage;

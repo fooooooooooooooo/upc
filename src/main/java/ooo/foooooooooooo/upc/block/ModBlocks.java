@@ -1,9 +1,9 @@
 package ooo.foooooooooooo.upc.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.core.Registry;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.Block;
 import ooo.foooooooooooo.upc.Upc;
 
 public final class ModBlocks {

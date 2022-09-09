@@ -5,9 +5,9 @@ import aztech.modern_industrialization.api.energy.EnergyExtractable;
 import aztech.modern_industrialization.api.energy.EnergyInsertable;
 import aztech.modern_industrialization.util.Simulation;
 import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import team.reborn.energy.api.base.SimpleEnergyStorage;
 
 public class UPCBlockEntity extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
