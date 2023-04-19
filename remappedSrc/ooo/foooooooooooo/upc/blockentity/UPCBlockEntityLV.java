@@ -1,5 +1,6 @@
 package ooo.foooooooooooo.upc.blockentity;
 
+import J;
 import aztech.modern_industrialization.api.energy.CableTier;
 import aztech.modern_industrialization.api.energy.EnergyExtractable;
 import aztech.modern_industrialization.api.energy.EnergyInsertable;
@@ -10,10 +11,10 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import team.reborn.energy.api.base.SimpleEnergyStorage;
 
-public class UPCBlockEntity extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
-    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(16_384, 16_384, 16_384);
+public class UPCBlockEntityLV extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
+    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(65_536, 65_536, 65_536);
 
-    public UPCBlockEntity(BlockPos pos, BlockState state) {
+    public UPCBlockEntityLV(BlockPos pos, BlockState state) {
         super(ModBlockEntities.UPC_BLOCK_ENTITY, pos, state);
     }
 

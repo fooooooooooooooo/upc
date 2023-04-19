@@ -8,20 +8,20 @@ import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
-import ooo.foooooooooooo.upc.blockentity.UPCBlockEntity;
+import ooo.foooooooooooo.upc.blockentity.UPCBlockEntityHV;
 import org.jetbrains.annotations.Nullable;
 
-public class UPCBlock extends Block implements BlockEntityProvider {
+public class UPCBlockHV extends Block implements BlockEntityProvider {
     public static final DirectionProperty FACING = FacingBlock.FACING;
 
-    public UPCBlock(Settings settings) {
+    public UPCBlockHV(Settings settings) {
         super(settings);
     }
 
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new UPCBlockEntity(pos, state);
+        return new UPCBlockEntityHV(pos, state);
     }
 
     @Override

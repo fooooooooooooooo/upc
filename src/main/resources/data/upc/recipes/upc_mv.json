@@ -13,11 +13,11 @@
       "tag": "c:iron_ingots"
     },
     "R": {
-      "item": "modern_industrialization:basic_machine_hull"
+      "item": "modern_industrialization:advanced_machine_hull"
     }
   },
   "result": {
-    "item": "upc:upc",
+    "item": "upc:upc_mv",
     "count": 1
   }
 }
