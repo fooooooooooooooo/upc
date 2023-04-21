@@ -13,7 +13,7 @@
       "tag": "c:iron_ingots"
     },
     "R": {
-      "tag": "modern_industrialization:turbo_machine_hull"
+      "item": "modern_industrialization:hv_storage_unit"
     }
   },
   "result": {

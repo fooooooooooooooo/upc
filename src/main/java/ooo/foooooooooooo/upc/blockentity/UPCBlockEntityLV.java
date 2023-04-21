@@ -1,8 +1,6 @@
 package ooo.foooooooooooo.upc.blockentity;
 
-import aztech.modern_industrialization.api.energy.CableTier;
-import aztech.modern_industrialization.api.energy.EnergyExtractable;
-import aztech.modern_industrialization.api.energy.EnergyInsertable;
+import aztech.modern_industrialization.api.energy.*;
 import aztech.modern_industrialization.util.Simulation;
 import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.block.BlockState;
@@ -11,7 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import team.reborn.energy.api.base.SimpleEnergyStorage;
 
 public class UPCBlockEntityLV extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
-    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(256, 256, 256);
+    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(192000, 256, 256);
 
     public UPCBlockEntityLV(BlockPos pos, BlockState state) {
         super(ModBlockEntities.UPC_BLOCK_ENTITY_LV, pos, state);
@@ -37,7 +35,10 @@ public class UPCBlockEntityLV extends BlockEntity implements EnergyInsertable, E
 
     @Override
     public boolean canExtract(CableTier cableTier) {
-        return true;
+        if (cableTier == CableTier.LV) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -60,7 +61,10 @@ public class UPCBlockEntityLV extends BlockEntity implements EnergyInsertable, E
 
     @Override
     public boolean canInsert(CableTier cableTier) {
-        return true;
+        if (cableTier == CableTier.LV) {
+            return true;
+        }
+        return false;
     }
 
     @Override

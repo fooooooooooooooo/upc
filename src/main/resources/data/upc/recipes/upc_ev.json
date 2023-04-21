@@ -13,7 +13,7 @@
       "tag": "c:iron_ingots"
     },
     "R": {
-      "tag": "modern_industrialization:highly_advanced_machine_hull"
+      "item": "modern_industrialization:ev_storage_unit"
     }
   },
   "result": {

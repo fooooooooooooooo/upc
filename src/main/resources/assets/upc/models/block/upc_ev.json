@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "upc:block/upc"
+    "all": "upc:block/upc_ev"
   }
 }
