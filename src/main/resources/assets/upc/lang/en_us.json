@@ -1,11 +1,11 @@
 {
-  "block.upc.upc": "Converter LV",
-  "item.upc.upc": "Converter LV",
-  "block.upc.upc_mv": "Converter MV",
-  "item.upc.upc_mv": "Converter MV",
-  "block.upc.upc_hv": "Converter HV",
-  "item.upc.upc_hv": "Converter HV",
-  "block.upc.upc_ev": "Converter EV",
-  "item.upc.upc_ev": "Converter EV",
-  "itemGroup.upc.tab": "MI Energy Converter"
+  "block.upc.upc": "UPC LV",
+  "item.upc.upc": "UPC LV",
+  "block.upc.upc_mv": "UPC MV",
+  "item.upc.upc_mv": "UPC MV",
+  "block.upc.upc_hv": "UPC HV",
+  "item.upc.upc_hv": "UPC HV",
+  "block.upc.upc_ev": "UPC EV",
+  "item.upc.upc_ev": "UPC EV",
+  "itemGroup.upc.tab": "UPC"
 }
