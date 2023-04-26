@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "upc:upc"
+    "upc:upc",
+    "upc:upc_mv",
+    "upc:upc_hv",
+    "upc:upc_ev"
   ]
 }

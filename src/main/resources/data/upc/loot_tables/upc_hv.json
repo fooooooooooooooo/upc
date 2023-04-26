@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "upc:upc"
+          "name": "upc:upc_hv"
         }
       ],
       "conditions": [

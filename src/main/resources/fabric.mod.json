@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "upc",
-  "version": "1.0.0",
-  "name": "UPC",
+  "version": "0.0.3",
+  "name": "MI Energy Converter",
   "description": "Adds a block to convert between Tech Reborn and Modern Industrialization energy",
   "authors": [
-    "fooooooooooooooo"
+    "fooooooooooooooo",
+    "MSandro"
   ],
   "contact": {
     "homepage": "https://github.com/fooooooooooooooo/upc#readme",

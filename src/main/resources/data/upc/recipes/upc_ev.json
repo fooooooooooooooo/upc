@@ -13,11 +13,11 @@
       "tag": "c:iron_ingots"
     },
     "R": {
-      "item": "modern_industrialization:lv_storage_unit"
+      "item": "modern_industrialization:ev_storage_unit"
     }
   },
   "result": {
-    "item": "upc:upc",
+    "item": "upc:upc_ev",
     "count": 1
   }
 }

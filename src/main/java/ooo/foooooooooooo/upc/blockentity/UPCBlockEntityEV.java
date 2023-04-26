@@ -10,11 +10,11 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import team.reborn.energy.api.base.SimpleEnergyStorage;
 
-public class UPCBlockEntity extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
-    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(16_384, 16_384, 16_384);
+public class UPCBlockEntityEV extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
+    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(49152000, 65536, 65536);
 
-    public UPCBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.UPC_BLOCK_ENTITY, pos, state);
+    public UPCBlockEntityEV(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.UPC_BLOCK_ENTITY_EV, pos, state);
     }
 
     @Override
@@ -37,7 +37,10 @@ public class UPCBlockEntity extends BlockEntity implements EnergyInsertable, Ene
 
     @Override
     public boolean canExtract(CableTier cableTier) {
-        return true;
+        if (cableTier == CableTier.LV || cableTier == CableTier.MV || cableTier == CableTier.HV || cableTier == CableTier.EV) {
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -60,7 +63,10 @@ public class UPCBlockEntity extends BlockEntity implements EnergyInsertable, Ene
 
     @Override
     public boolean canInsert(CableTier cableTier) {
-        return true;
+        if (cableTier == CableTier.LV || cableTier == CableTier.MV || cableTier == CableTier.HV || cableTier == CableTier.EV) {
+            return true;
+        }
+        return false;
     }
 
     @Override

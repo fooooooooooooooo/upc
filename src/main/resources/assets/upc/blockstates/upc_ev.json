@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "upc:block/upc_ev"
+    }
+  }
+}

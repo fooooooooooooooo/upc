@@ -10,11 +10,29 @@ import team.reborn.energy.api.EnergyStorage;
 
 public final class ModBlockEntities {
     public static void registerBlockEntities() {
-        register("upc", UPC_BLOCK_ENTITY);
-        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.storage, UPC_BLOCK_ENTITY);
-        EnergyApi.MOVEABLE.registerForBlockEntity((blockEntity, direction) -> blockEntity, UPC_BLOCK_ENTITY);
-    }    public static final BlockEntityType<UPCBlockEntity> UPC_BLOCK_ENTITY
-            = FabricBlockEntityTypeBuilder.create(UPCBlockEntity::new, ModBlocks.UPC_BLOCK).build();
+        register("upc", UPC_BLOCK_ENTITY_LV);
+        register("upc_mv", UPC_BLOCK_ENTITY_MV);
+        register("upc_hv", UPC_BLOCK_ENTITY_HV);
+        register("upc_ev", UPC_BLOCK_ENTITY_EV);
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.storage, UPC_BLOCK_ENTITY_LV);
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.storage, UPC_BLOCK_ENTITY_MV);
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.storage, UPC_BLOCK_ENTITY_HV);
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.storage, UPC_BLOCK_ENTITY_EV);
+        EnergyApi.MOVEABLE.registerForBlockEntity((blockEntity, direction) -> blockEntity, UPC_BLOCK_ENTITY_LV);
+        EnergyApi.MOVEABLE.registerForBlockEntity((blockEntity, direction) -> blockEntity, UPC_BLOCK_ENTITY_MV);
+        EnergyApi.MOVEABLE.registerForBlockEntity((blockEntity, direction) -> blockEntity, UPC_BLOCK_ENTITY_HV);
+        EnergyApi.MOVEABLE.registerForBlockEntity((blockEntity, direction) -> blockEntity, UPC_BLOCK_ENTITY_EV);
+    }
+    public static final BlockEntityType<UPCBlockEntityLV> UPC_BLOCK_ENTITY_LV
+            = FabricBlockEntityTypeBuilder.create(UPCBlockEntityLV::new, ModBlocks.UPC_BLOCK_LV).build();
+    public static final BlockEntityType<UPCBlockEntityMV> UPC_BLOCK_ENTITY_MV
+            = FabricBlockEntityTypeBuilder.create(UPCBlockEntityMV::new, ModBlocks.UPC_BLOCK_MV).build();
+
+    public static final BlockEntityType<UPCBlockEntityHV> UPC_BLOCK_ENTITY_HV
+            = FabricBlockEntityTypeBuilder.create(UPCBlockEntityHV::new, ModBlocks.UPC_BLOCK_HV).build();
+
+    public static final BlockEntityType<UPCBlockEntityEV> UPC_BLOCK_ENTITY_EV
+            = FabricBlockEntityTypeBuilder.create(UPCBlockEntityEV::new, ModBlocks.UPC_BLOCK_EV).build();
 
     @SuppressWarnings({"SameParameterValue", "rawtypes"})
     private static void register(String path, BlockEntityType block) {
