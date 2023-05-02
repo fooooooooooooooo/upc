@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "upc:block/upc"
+    "variants": {
+        "": {
+            "model": "upc:block/upc"
+        }
     }
-  }
 }

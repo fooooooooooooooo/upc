@@ -1,23 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ICI",
-    "CRC",
-    "ICI"
-  ],
-  "key": {
-    "C": {
-      "tag": "c:copper_ingots"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ICI", "CRC", "ICI"
+    ],
+    "key": {
+        "C": {
+            "tag": "c:copper_ingots"
+        },
+        "I": {
+            "tag": "c:iron_ingots"
+        },
+        "R": {
+            "tag": "c:redstone_blocks"
+        }
     },
-    "I": {
-      "tag": "c:iron_ingots"
-    },
-    "R": {
-      "tag": "c:redstone_blocks"
+    "result": {
+        "item": "upc:upc",
+        "count": 1
     }
-  },
-  "result": {
-    "item": "upc:upc",
-    "count": 1
-  }
 }

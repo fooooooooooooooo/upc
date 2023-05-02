@@ -15,11 +15,11 @@ public final class ModBlockEntities {
         EnergyApi.MOVEABLE.registerForBlockEntity((blockEntity, direction) -> blockEntity, UPC_BLOCK_ENTITY);
     }
 
-    @SuppressWarnings({"SameParameterValue", "rawtypes"})
+    @SuppressWarnings({ "SameParameterValue", "rawtypes" })
     private static void register(String path, BlockEntityType block) {
         Registry.register(Registry.BLOCK_ENTITY_TYPE, Upc.id(path), block);
     }
 
-    public static final BlockEntityType<UPCBlockEntity> UPC_BLOCK_ENTITY
-            = FabricBlockEntityTypeBuilder.create(UPCBlockEntity::new, ModBlocks.UPC_BLOCK).build();
+    public static final BlockEntityType<UPCBlockEntity> UPC_BLOCK_ENTITY =
+        FabricBlockEntityTypeBuilder.create(UPCBlockEntity::new, ModBlocks.UPC_BLOCK).build();
 }
