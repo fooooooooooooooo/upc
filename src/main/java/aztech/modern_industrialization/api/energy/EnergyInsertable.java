@@ -25,11 +25,13 @@ package aztech.modern_industrialization.api.energy;
 
 import aztech.modern_industrialization.util.Simulation;
 
+@SuppressWarnings("unused")
 public interface EnergyInsertable extends EnergyMoveable {
     /**
      * Attempt to partially insert energy into the block.
      *
      * @param amount How much energy to insert.
+     *
      * @return The inserted energy.
      */
     long insertEnergy(long amount, Simulation simulation);
@@ -38,8 +40,8 @@ public interface EnergyInsertable extends EnergyMoveable {
      * Return whether the machine can accept energy from a given pipe tier.
      *
      * @param tier The tier of the connexion.
-     * @return whether true if the machine can accept energy from that pipe tier, or
-     *         false otherwise.
+     *
+     * @return whether true if the machine can accept energy from that pipe tier, or false otherwise.
      */
     boolean canInsert(CableTier tier);
 }

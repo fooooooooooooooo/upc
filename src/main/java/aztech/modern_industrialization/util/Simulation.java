@@ -23,6 +23,7 @@
  */
 package aztech.modern_industrialization.util;
 
+@SuppressWarnings("unused")
 public enum Simulation {
     SIMULATE,
     ACT;

@@ -1,23 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ICI",
-    "CRC",
-    "ICI"
-  ],
-  "key": {
-    "C": {
-      "tag": "c:copper_ingots"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ICI",
+        "CRC",
+        "ICI"
+    ],
+    "key": {
+        "C": {
+            "tag": "c:copper_ingots"
+        },
+        "I": {
+            "tag": "c:iron_ingots"
+        },
+        "R": {
+            "item": "modern_industrialization:lv_storage_unit"
+        }
     },
-    "I": {
-      "tag": "c:iron_ingots"
-    },
-    "R": {
-      "item": "modern_industrialization:lv_storage_unit"
+    "result": {
+        "item": "upc:upc",
+        "count": 1
     }
-  },
-  "result": {
-    "item": "upc:upc",
-    "count": 1
-  }
 }

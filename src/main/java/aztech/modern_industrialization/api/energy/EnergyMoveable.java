@@ -26,5 +26,4 @@ package aztech.modern_industrialization.api.energy;
 /**
  * Base interface for {@link EnergyExtractable} and {@link EnergyInsertable}
  */
-public interface EnergyMoveable {
-}
+public interface EnergyMoveable { }

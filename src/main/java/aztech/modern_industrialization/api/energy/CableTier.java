@@ -23,6 +23,7 @@
  */
 package aztech.modern_industrialization.api.energy;
 
+@SuppressWarnings("unused")
 public enum CableTier {
     LV("lv", 32),
     MV("mv", 32 * 4),
@@ -43,8 +44,8 @@ public enum CableTier {
     }
 
     /**
-     * @return The total EU/t transferred by this tier of network. The same number
-     *         is also the internal storage of every node.
+     * @return The total EU/t transferred by this tier of network. The same number is also the internal storage of every
+     *     node.
      */
     public long getMaxTransfer() {
         return eu * 8;
@@ -59,12 +60,13 @@ public enum CableTier {
         return name;
     }
 
-    public static final CableTier getTier(String name) {
+    public static CableTier getTier(String name) {
         for (CableTier tier : CableTier.values()) {
             if (tier.name.equals(name)) {
                 return tier;
             }
         }
+
         return null;
     }
 }

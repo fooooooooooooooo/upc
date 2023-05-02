@@ -8,13 +8,18 @@ import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
+import ooo.foooooooooooo.upc.Tier;
 import team.reborn.energy.api.base.SimpleEnergyStorage;
 
-public class UPCBlockEntityEV extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
-    public final SimpleEnergyStorage storage = new SimpleEnergyStorage(49152000, 65536, 65536);
+public class UpcBlockEntity extends BlockEntity implements EnergyInsertable, EnergyExtractable, UPCStorage {
+    public final SimpleEnergyStorage storage;
+    private final Tier tier;
 
-    public UPCBlockEntityEV(BlockPos pos, BlockState state) {
+    public UpcBlockEntity(BlockPos pos, BlockState state, Tier tier) {
         super(ModBlockEntities.UPC_BLOCK_ENTITY_EV, pos, state);
+
+        storage = new SimpleEnergyStorage(tier.capacity, tier.maxInsert, tier.maxExtract);
+        this.tier = tier;
     }
 
     @Override
@@ -37,10 +42,7 @@ public class UPCBlockEntityEV extends BlockEntity implements EnergyInsertable, E
 
     @Override
     public boolean canExtract(CableTier cableTier) {
-        if (cableTier == CableTier.LV || cableTier == CableTier.MV || cableTier == CableTier.HV || cableTier == CableTier.EV) {
-            return true;
-        }
-        return false;
+        return tier.Compatible(cableTier);
     }
 
     @Override
@@ -63,10 +65,7 @@ public class UPCBlockEntityEV extends BlockEntity implements EnergyInsertable, E
 
     @Override
     public boolean canInsert(CableTier cableTier) {
-        if (cableTier == CableTier.LV || cableTier == CableTier.MV || cableTier == CableTier.HV || cableTier == CableTier.EV) {
-            return true;
-        }
-        return false;
+        return tier.Compatible(cableTier);
     }
 
     @Override

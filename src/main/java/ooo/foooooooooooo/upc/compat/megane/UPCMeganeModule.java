@@ -2,8 +2,6 @@ package ooo.foooooooooooo.upc.compat.megane;
 
 import lol.bai.megane.api.MeganeModule;
 import lol.bai.megane.api.registry.CommonRegistrar;
-import ooo.foooooooooooo.upc.blockentity.UPCBlockEntityLV;
-import ooo.foooooooooooo.upc.blockentity.UPCBlockEntityMV;
 
 public class UPCMeganeModule implements MeganeModule {
     @Override

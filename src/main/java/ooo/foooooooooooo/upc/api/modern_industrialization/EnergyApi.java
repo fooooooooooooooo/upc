@@ -6,6 +6,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
 public class EnergyApi {
-    public static final BlockApiLookup<EnergyMoveable, Direction> MOVEABLE = BlockApiLookup
-            .get(new Identifier("modern_industrialization:energy_moveable"), EnergyMoveable.class, Direction.class);
+    public static final BlockApiLookup<EnergyMoveable, Direction> MOVEABLE =
+        BlockApiLookup.get(new Identifier("modern_industrialization:energy_moveable"),
+            EnergyMoveable.class,
+            Direction.class
+        );
 }
