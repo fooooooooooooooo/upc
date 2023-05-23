@@ -1,9 +1,9 @@
 {
     "schemaVersion": 1,
     "id": "upc",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "name": "MI Energy Converter",
-    "description": "Adds a block to convert between Tech Reborn and Modern Industrialization energy",
+    "description": "Adds blocks to convert between Tech Reborn and Modern Industrialization energy",
     "authors": [
         "fooooooooooooooo",
         "MSandro"

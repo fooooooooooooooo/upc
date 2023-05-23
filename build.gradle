@@ -8,16 +8,7 @@ group = project.maven_group
 
 repositories {
     // WTHIT + Megane
-    maven {
-        url 'https://maven.bai.lol'
-    }
-    // Modern Industrialization
-    maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
+    maven { url 'https://maven.bai.lol' }
 }
 
 dependencies {
@@ -32,27 +23,8 @@ dependencies {
     }
 
     modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
-    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
 
     modImplementation("lol.bai.megane:megane-api:${project.megane_api_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
-    modRuntimeOnly("lol.bai.megane:megane-runtime:${project.megane_runtime_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-        exclude(group: "mcp.mobius.waila")
-    }
-
-    modRuntimeOnly("lol.bai.megane:megane-vanilla:${project.megane_vanilla_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-        exclude(group: "mcp.mobius.waila")
-    }
-
-    dependencies {
-        modRuntimeOnly("lol.bai:badpackets:fabric-${project.badpackets_version}")
-    }
-
-    modImplementation("curse.maven:modern-industrialization-405388:3818691") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }
